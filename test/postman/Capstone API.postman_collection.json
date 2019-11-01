@@ -48,6 +48,29 @@
 			"response": []
 		},
 		{
+			"name": "Delete Entity by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/entity/5dbb8ca2c629a11fac166abf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entity",
+						"5dbb8ca2c629a11fac166abf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create Entity",
 			"request": {
 				"method": "POST",
@@ -82,6 +105,47 @@
 					"port": "3000",
 					"path": [
 						"entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Entity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Name",
+							"value": "Test Name 3",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "Test description 3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/entity/5dbb8e8dd8a47a01f449364b",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entity",
+						"5dbb8e8dd8a47a01f449364b"
 					]
 				}
 			},

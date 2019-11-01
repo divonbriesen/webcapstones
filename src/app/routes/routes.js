@@ -8,13 +8,10 @@ module.exports = function(app, db) {
 
             db.collection('entities').insert(entity, (error, result) => {
                 if (error) {
-                    response.send({
-                        'error': 'An error has occurred'
-                    });
+                    response.send({'error': 'An error has occurred'});
                 }
-                else {
-                    response.send(result.ops[0]);
-                }
+
+                response.send(result.ops[0]);
             });
         }
     );
@@ -50,4 +47,23 @@ module.exports = function(app, db) {
             response.send('Entity ' + id + ' deleted.');
         })
     });
-};
+
+    app.put('/entity/:id', (request, response) => {
+
+        const id = request.params.id;
+        const details = { '_id': new ObjectID(id) };
+
+        const entity = { Name: request.body.Name, Description: request.body.Description };
+
+        db.collection('entities').update(details, entity, (error, result) => {
+            if (error) {
+                response.send({
+                    'error': 'An error has occurred'
+                });
+            }
+
+            response.send(entity);
+        })
+    });
+    
+}
