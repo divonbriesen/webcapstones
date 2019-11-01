@@ -34,4 +34,20 @@ module.exports = function(app, db) {
             response.send(item);
         })
     });
+
+    app.delete('/entity/:id', (request, response) => {
+
+        const id = request.params.id;
+        const details = { '_id': new ObjectID(id) };
+
+        const collection = db.collection('entities');
+
+        collection.remove(details, (error, item) => {
+            if (error) {
+                response.send( {'error': 'An error has occurred'});
+            }
+
+            response.send('Entity ' + id + ' deleted.');
+        })
+    });
 };
