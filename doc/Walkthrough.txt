@@ -1,0 +1,20 @@
+Steps to get the site going
+
+- Setup repository, add readme and node gitignore
+
+- Clone repo to local machine
+
+- Install Node (version TBD), this will install node and npm
+
+- Run npm init in src folder in local repo, this will setup package.json
+
+- Run npm install express (version TBD), application framework
+
+- Run npm install mongodb@2.2.16 (version TBD), database technology
+
+- Run npm install body-parser (version TBD), parses json bodies of HTTP requests
+
+- Run npm install --save-dev nodemon, this utility restarts the web server when a file changes
+
+
+
