@@ -1,27 +1,34 @@
 const express = require('express');
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const bodyParser = require('body-parser');
-const dbConfig = require('./config/db');
 
 app.use(express.static('.'));
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+const bodyParser = require('body-parser');
 
-const port = 3000;
+//app.use(bodyParser.urlencoded({
+    extended: true
+//}));
+thing = {extended: true};
+thing2 = bodyParser.urlencoded(thing);
+app.use(thing2);
+
+const MongoClient = require('mongodb').MongoClient;
+const dbConfig = require('./config/db');
+const dbName = "capstone"; // name used on mongo site?
+const routesPath = "./app/routes"
 
 MongoClient.connect(dbConfig.url, (error, client) => {
     if (error) {
         return console.log(error);
     }
 
-    const database = client.db("capstone");
-    const routes = require('./app/routes');
+    const database = client.db(dbName);
+    const routes = require(routesPath);
     routes(app, database);
 });
 
-var server = app.listen(port, () => { 
-    console.log("Website and API are running on port " + port + " . . .");
-});
+const port = 3000;
+var startupMessage = `Website and API are running on port  + ${port}  . . .`;
+var reportAppStatus = () => console.log(startupMessage);
+
+var server = app.listen(port, reportAppStatus);
