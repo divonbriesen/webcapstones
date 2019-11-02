@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "site",
   "version": "0.0.1",
   "scripts": {
@@ -17,4 +18,16 @@
   "author": "",
   "license": "ISC",
   "description": "Test project for DI's capstone class"
+=======
+    "name": "site",
+    "version": "0.0.0",
+    "scripts": {},
+    "private": true,
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mongodb": "^2.2.16"
+    },
+    "devDependencies": {}
+>>>>>>> be242509fe9337d4c328aabb6ce5dcdfe0a986d6
 }
