@@ -3,4 +3,58 @@ body
     color: teal;
     background-color: silver;
     font-family: Tahoma;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+header
+{
+    text-align: center;
+}
+
+h1
+{
+    font-family: Times;
+    text-align: center;
+}
+
+figcaption
+{
+    font-style: italic;
+}
+
+footer
+{
+    font-style: italic;
+    text-align: center;
+}
+
+a, a:visited, a:active
+{
+    text-decoration: none;
+    font-style: bold;
+    color: orange;
+}
+
+a:hover
+{
+    color: white;
+}
+
+.memberdisplaygroup
+{
+    text-align: center;
+}
+
+.member
+{
+    border: 3px dashed lightskyblue;
+    display: inline-block;
+    position: float;
+    width: 350px;
+}
+
+.member h2
+{
+    text-align: center;
 }

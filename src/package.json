@@ -4,16 +4,16 @@
   "scripts": {
     "dev": "nodemon server.js"
   },
-  "private": true,
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongodb": "^2.2.16"
-  },
   "devDependencies": {
     "nodemon": "^1.19.4"
   },
-  "main": "site.js",
+    "private": true,
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mongodb": "^2.2.16"
+    },
+	"main": "site.js",
   "author": "",
   "license": "ISC",
   "description": "Test project for DI's capstone class"
