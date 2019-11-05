@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "a02b8bcc-a53e-4f66-96e6-462c3a88ec13",
+		"name": "Capstone API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Entity by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/entity/5dbb86e1881df31c2cac275e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entity",
+						"5dbb86e1881df31c2cac275e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Entity by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/entity/5dbb8ca2c629a11fac166abf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entity",
+						"5dbb8ca2c629a11fac166abf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Entity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Name",
+							"value": "Test Name",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "Test description",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/entity",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Entity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Name",
+							"value": "Test Name 3",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "Test description 3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/entity/5dbb8e8dd8a47a01f449364b",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"entity",
+						"5dbb8e8dd8a47a01f449364b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
